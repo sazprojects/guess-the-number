@@ -1,4 +1,4 @@
-let max = parseInt(prompt("Enter a number > or = 10 🧑🏻‍💻"))
+let max = parseInt(prompt("Enter a number = or > 10 🧑🏻‍💻"))
 while (!(max >= 10)) {
     if (isNaN(max)) {
         alert("You can't exit 😝")
@@ -6,7 +6,7 @@ while (!(max >= 10)) {
     else {
         alert("Invalid input 😠")
     }
-    max = parseInt(prompt("Enter a number > or = 10 🧑🏻‍💻"))
+    max = parseInt(prompt("Enter a number = or > 10 🧑🏻‍💻"))
 }
 let min = 1;
 let num = Math.floor(Math.random() * max) + 1;
