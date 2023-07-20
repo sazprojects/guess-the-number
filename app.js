@@ -24,7 +24,7 @@ while (!(inp === num)) {
         inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (inp < min || inp > max) {
-        alert(`You can't enter a number less than ${min} and greater than ${max} 😐`)
+        alert(`You can't enter a number : <${min} & >${max} 😐`)
         inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (inp === max || inp === min) {
