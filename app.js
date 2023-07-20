@@ -1,36 +1,37 @@
-let max = parseInt(prompt("Enter a number"))
-while (!(max > 1)) {
+let max = parseInt(prompt("Enter a number > or = 10"))
+while (!(max >= 10)) {
     if (isNaN(max)) {
-        alert("You can't exit :P")
+        alert("You can't exit 😝")
     }
-    alert("Enter a number greater than 1")
-    max = parseInt(prompt("Enter a number"))
+    alert("Invalid input 😠")
+    max = parseInt(prompt("Enter a number > or = 10"))
 }
 let min = 1;
 let num = Math.floor(Math.random() * max) + 1;
-let inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+alert("A random number has been assigned 😀")
+let inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
 while (!(inp === num)) {
     if (inp > min && inp < num) {
         min = inp;
-        alert(`Your number is between ${min} and ${max}`)
-        inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+        alert(`Your number in the range of ${min} and ${max}`)
+        inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (inp > num && inp < max) {
         max = inp;
-        alert(`Your number is between ${min} and ${max}`)
-        inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+        alert(`Your number in the range of ${min} and ${max}`)
+        inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (inp < min || inp > max) {
         alert(`You can't enter a number less than ${min} and greater than ${max}`)
-        inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+        inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (inp === max || inp === min) {
-        alert(`Your number is between ${min} and ${max}`)
-        inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+        alert(`Your number is in the range of ${min} and ${max}`)
+        inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
     else if (isNaN(inp)) {
-        alert("You can't exit :P")
-        inp = parseInt(prompt(`Guess the number: between ${min} and ${max}`))
+        alert("You can't exit 😝")
+        inp = parseInt(prompt(`Guess the number 🤔 : ${min} - ${max}`))
     }
 }
-alert(`Yay ! You guessed the number correctly: ${num}`)
+alert(`Yay 🎉 ! You guessed the number correctly 🥳 : ${num}`)
